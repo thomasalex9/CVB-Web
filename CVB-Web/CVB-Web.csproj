@@ -146,57 +146,156 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="application.cs" />
-    <Compile Include="app_domain.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="app_vendor.cs" />
-    <Compile Include="audit.cs" />
-    <Compile Include="company.cs" />
-    <Compile Include="company_info.cs" />
-    <Compile Include="consultant.cs" />
-    <Compile Include="consultant_application.cs" />
-    <Compile Include="consultant_biography.cs" />
-    <Compile Include="consultant_certification.cs" />
-    <Compile Include="consultant_education.cs" />
-    <Compile Include="consultant_employment_history.cs" />
-    <Compile Include="consultant_skill.cs" />
-    <Compile Include="consultant_summary.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="domain.cs" />
-    <Compile Include="event_role.cs" />
-    <Compile Include="exp.cs" />
-    <Compile Include="experience.cs" />
-    <Compile Include="experience_detail.cs" />
-    <Compile Include="exp_detail.cs" />
-    <Compile Include="exp_layout.cs" />
-    <Compile Include="exp_layout_grp.cs" />
-    <Compile Include="exp_layout_grp_dtl.cs" />
-    <Compile Include="exp_sort_col.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="holiday.cs" />
-    <Compile Include="ModelCvb.cs" />
-    <Compile Include="noteworthy_sow.cs" />
-    <Compile Include="proficiency.cs" />
-    <Compile Include="project_type.cs" />
+    <Compile Include="Models\application.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\app_domain.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\app_vendor.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\audit.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\company.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\company_info.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant_application.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant_biography.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant_certification.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant_education.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant_employment_history.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant_skill.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consultant_summary.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\domain.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\event_role.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exp.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\experience.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\experience_detail.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exp_detail.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exp_layout.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exp_layout_grp.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exp_layout_grp_dtl.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exp_sort_col.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\holiday.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCvb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCvb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCvb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCvb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCvb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\noteworthy_sow.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\proficiency.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\project_type.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\publication.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\role.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\skill.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sow.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sow_consultant.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\speaking_engagement.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\thought_leadership.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\timeslip.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\timeslip_period.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\timeslip_phase.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\timeslip_role.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\timeslip_task.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\title.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\white_paper.cs">
+      <DependentUpon>ModelCvb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="publication.cs" />
-    <Compile Include="role.cs" />
-    <Compile Include="skill.cs" />
-    <Compile Include="sow.cs" />
-    <Compile Include="sow_consultant.cs" />
-    <Compile Include="speaking_engagement.cs" />
-    <Compile Include="thought_leadership.cs" />
-    <Compile Include="timeslip.cs" />
-    <Compile Include="timeslip_period.cs" />
-    <Compile Include="timeslip_phase.cs" />
-    <Compile Include="timeslip_role.cs" />
-    <Compile Include="timeslip_task.cs" />
-    <Compile Include="title.cs" />
-    <Compile Include="white_paper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -205,10 +304,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ModelCvb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCvb.edmx</DependentUpon>
+      <LastGenOutput>ModelCvb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelCvb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCvb.edmx</DependentUpon>
+      <LastGenOutput>ModelCvb.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\ModelCvb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCvb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelCvb.edmx.diagram">
+      <DependentUpon>ModelCvb.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\CVB-Web20170528095449 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -236,10 +352,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Company\Create.cshtml" />
+    <Content Include="Views\Company\Delete.cshtml" />
+    <Content Include="Views\Company\Details.cshtml" />
+    <Content Include="Views\Company\Edit.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -255,6 +375,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

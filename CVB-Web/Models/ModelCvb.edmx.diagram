@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ecb29a796001484fa463f2e70f21b902" Name="Diagram1" ZoomLevel="21">
+        <EntityTypeShape EntityType="ModelCvb.app_domain" Width="1.5" PointX="3.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.app_vendor" Width="1.5" PointX="3.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.application" Width="1.5" PointX="6" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.audit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.company" Width="1.5" PointX="12" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.company_info" Width="1.5" PointX="16.5" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant" Width="1.5" PointX="3" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant_application" Width="1.5" PointX="8.25" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant_biography" Width="1.5" PointX="5.25" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant_certification" Width="1.5" PointX="5.25" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant_education" Width="1.5" PointX="5.25" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant_employment_history" Width="1.5" PointX="8.25" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant_skill" Width="1.5" PointX="8.25" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.consultant_summary" Width="1.5" PointX="5.25" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.domain" Width="1.5" PointX="12" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.event_role" Width="1.5" PointX="3" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.exp" Width="1.5" PointX="11.25" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.exp_detail" Width="1.5" PointX="13.5" PointY="40.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.exp_layout" Width="1.5" PointX="11.25" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.exp_layout_grp" Width="1.5" PointX="13.5" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.exp_layout_grp_dtl" Width="1.5" PointX="15.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.exp_sort_col" Width="1.5" PointX="9" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.experience" Width="1.5" PointX="5.25" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.experience_detail" Width="1.5" PointX="7.5" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.holiday" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.noteworthy_sow" Width="1.5" PointX="11.25" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.proficiency" Width="1.5" PointX="6" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.project_type" Width="1.5" PointX="12" PointY="49.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.publication" Width="1.5" PointX="5.25" PointY="68.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.role" Width="1.5" PointX="11.25" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.skill" Width="1.5" PointX="6" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.sow" Width="1.5" PointX="14.25" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.sow_consultant" Width="1.5" PointX="8.25" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.speaking_engagement" Width="1.5" PointX="5.25" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.thought_leadership" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.timeslip" Width="1.5" PointX="18.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.timeslip_period" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.timeslip_phase" Width="1.5" PointX="16.5" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.timeslip_role" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.timeslip_task" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.title" Width="1.5" PointX="0.75" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelCvb.white_paper" Width="1.5" PointX="5.25" PointY="86.375" IsExpanded="true" />
+        <AssociationConnector Association="ModelCvb.FK_application_D93CAFE2_39E8_4459_9101_8B061C9A5670" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_application_BA0E0FB1_847C_4FE9_97E1_1807400DFF59" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_application_0532CD07_BD99_4DA3_8E72_34A9E114425F" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_employment_hi_8332EF55_9DE1_423F_BE57_104A290FDF6A" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_D4497879_2AFD_4D88_80BE_319EFB05F584" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_sow_1547570A_DCDE_4EF6_87CA_00493E0C44C2" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_company_info_73948F99_6291_4E17_9CF0_738A6D600F41" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_article_60D831CF_722E_4D75_9455_5DCFF7324AFE" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_09553624_1731_467E_8CB6_75F507975046" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_application_D84372A0_5CF6_48BA_82A0_2AEB0317517D" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_biography_3DFDCB39_8D9E_466B_A7C4_5E164D59029C" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_certification_611F43F4_B959_4E86_BB28_A0ADCF2449D2" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_education_10182284_20C2_407C_A1B5_36F95258E23A" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_employment_hi_E076870E_EFAF_41D1_A0DF_A4EF75C0505D" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_experience_17588600_E1FB_486C_A6F7_99C79EDFFFE3" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_skill_28A0DBD8_DB60_44EB_B061_D43E9A35EBF7" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_summary_C0D51633_5DE7_4765_9088_55CB55B42D06" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_F2E3737F_9EA4_4028_A8A2_D6EF66DB1802" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_view_C0BF97BA_7B07_4CAE_AA09_B0ACEDCB97CC" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_noteworthy_sow_7BF85959_9DDD_4C25_81BF_B5162395014F" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_sow_consultant_A34D3157_971A_4DED_BBD1_7BDDA9657221" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_sow_E64A6566_7C39_484E_BB65_1A0C7C0E07FE" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_speaking_engagement_7195E0EA_544B_4687_A862_C4F64C3E148E" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_timeslip_9977087E_C7FB_4BFA_BD85_AAA31928E41C" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_white_paper_99A181AF_B435_4C8D_8870_5D76D0F4DFA1" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_application_05C5F6D7_49C2_4724_985A_65C5EDC74E33" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_skill_B4B1E3F9_48E6_4517_8D10_A2473AC54831" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_skill_E3B4A3D9_D9F4_40BE_8087_71A156A28BE3" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_DBCDEE78_FAD5_4382_8BCC_18C1E1D7B588" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_sow_2AAD7C02_51AB_424D_BDFB_F37E29685BD9" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_speaking_engagement_38051F2B_E596_4A56_B8CE_52F1217E96CF" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_72AA7967_C60A_4A53_9C1C_FDED2B4B53E4" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_detail_AB1F14AA_544A_4984_92F6_E556F2D6B6D3" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_ECDA59DF_D8C1_4BF5_9D7D_62FEED5848E6" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_detail_CC0A8F4A_627A_474D_B853_45F485E0C720" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_view_grp_dtl_A3B0F7ED_901F_4721_8692_5717BDBCB4D4" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_view_27BBD070_FF0C_494D_9EB2_3A43D7942054" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_view_3ED09352_9C09_4000_9E1B_FEAA70ABBFBB" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_view_FCDC0557_7F22_4CE1_B50A_2195A423F79F" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_exp_view_grp_221A90E3_5C6B_4ED8_B825_60EA383BFBEC" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_experience_9853426D_05AC_4213_819A_DC51BFB2110C" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_experience_de_24935C47_C285_422C_860A_FB16D48EA4AD" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_consultant_experience_de_14142970_A023_47FB_928E_CEEDA7A3DF70" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_noteworthy_sow_A9057B58_3D01_43C0_A36E_4B88B8C7DFA2" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_sow_317FADBD_90B1_4BE1_9952_63945D498100" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_sow_consultant_F51D4888_C50E_44C8_B659_FB1C722BF9DF" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_timeslip_46AC1811_658D_43D8_A1A1_B15D0521C937" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_timeslip_phase_FF77D194_1417_4139_BBB4_130AFBC812F1" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelCvb.FK_timeslip_1F1D7E5F_C9BA_440D_B4C9_C1C8323AC8D0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
