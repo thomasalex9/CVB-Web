@@ -11,16 +11,31 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>company</h4>
+        <h4>@Model.company_nm</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.ID)
 
+        @*
         @Html.HiddenFor(model => model.company_nm)
-
         @Html.HiddenFor(model => model.is_client)
-
         @Html.HiddenFor(model => model.company_short_nm)
+        *@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.company_nm, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.company_nm, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.company_nm, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.is_client, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.is_client, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.company_location, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -35,6 +50,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.company_descr, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.company_descr, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.company_short_nm, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.company_short_nm, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.company_short_nm, "", new { @class = "text-danger" })
             </div>
         </div>
 

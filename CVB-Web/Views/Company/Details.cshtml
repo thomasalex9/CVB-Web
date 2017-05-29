@@ -4,31 +4,23 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Company Details</h2>
 
 <div>
-    <h4>company</h4>
-    <hr />
+    <h4>@Model.company_nm</h4>
+
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.company_location)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.company_location)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.company_descr)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.company_descr)
-        </dd>
-
+        <dt> @Html.DisplayNameFor(model => model.company_location) </dt>
+            <dd> @Html.DisplayFor(model => model.company_location) </dd>
+        <dt> @Html.DisplayNameFor(model => model.is_client) </dt>
+            <dd> @Html.DisplayFor(model => model.is_client) </dd>
+        <dt> @Html.DisplayNameFor(model => model.company_descr) </dt>
+            <dd> @Html.DisplayFor(model => model.company_descr) </dd>
+        <dt> @Html.DisplayNameFor(model => model.company_short_nm) </dt>
+            <dd> @Html.DisplayFor(model => model.company_short_nm) </dd>
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class="btn btn-primary"})
     @Html.ActionLink("Back to List", "Index")
 </p>

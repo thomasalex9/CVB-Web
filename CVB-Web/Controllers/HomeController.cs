@@ -26,5 +26,11 @@ namespace CVB_Web.Controllers
 
             return View();
         }
+
+        public ActionResult ReferenceTables()
+        {
+            return View();
+        }
+
     }
 }

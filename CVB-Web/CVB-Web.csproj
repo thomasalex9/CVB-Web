@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -256,6 +257,7 @@
     <Compile Include="Models\publication.cs">
       <DependentUpon>ModelCvb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\QueryOptions.cs" />
     <Compile Include="Models\role.cs">
       <DependentUpon>ModelCvb.tt</DependentUpon>
     </Compile>
@@ -357,6 +359,7 @@
     <Content Include="Views\Company\Details.cshtml" />
     <Content Include="Views\Company\Edit.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Home\ReferenceTables.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

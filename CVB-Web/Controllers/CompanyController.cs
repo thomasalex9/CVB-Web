@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using CVB_Web;
 using CVB_Web.Models;
+using System.Web.ModelBinding;
 
 namespace CVB_Web.Controllers {
 
@@ -17,8 +18,12 @@ namespace CVB_Web.Controllers {
         private meradia_db db = new meradia_db();
 
         // GET: Company
-        public ActionResult Index() {
+        public ActionResult Index([Form] QueryOptions queryOptions) {
+
             var m = db.companies.ToList();
+
+            ViewBag.QueryOptions = queryOptions;
+
             return View(m);
         }
 
@@ -48,7 +53,7 @@ namespace CVB_Web.Controllers {
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,company_nm,is_client,company_short_nm,company_location,company_descr")] company company)
+        public ActionResult Create([Bind(Include = "company_nm,is_client,company_short_nm,company_location,company_descr")] company company)
         {
             if (ModelState.IsValid)
             {
