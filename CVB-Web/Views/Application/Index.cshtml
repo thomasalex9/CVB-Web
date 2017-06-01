@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CVB_Web.Models.application>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.application_nm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.application_descr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.formal_nm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.app_domain.app_domain_nm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.app_vendor.app_vendor_nm)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.application_nm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.application_descr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.formal_nm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.app_domain.app_domain_nm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.app_vendor.app_vendor_nm)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

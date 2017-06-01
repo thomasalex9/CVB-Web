@@ -150,6 +150,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AppDomainController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\AppVendorController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -369,6 +371,16 @@
     <Content Include="Views\AppDomain\Details.cshtml" />
     <Content Include="Views\AppDomain\Edit.cshtml" />
     <Content Include="Views\AppDomain\Index.cshtml" />
+    <Content Include="Views\AppVendor\Create.cshtml" />
+    <Content Include="Views\AppVendor\Delete.cshtml" />
+    <Content Include="Views\AppVendor\Details.cshtml" />
+    <Content Include="Views\AppVendor\Edit.cshtml" />
+    <Content Include="Views\AppVendor\Index.cshtml" />
+    <Content Include="Views\Application\Create.cshtml" />
+    <Content Include="Views\Application\Delete.cshtml" />
+    <Content Include="Views\Application\Details.cshtml" />
+    <Content Include="Views\Application\Edit.cshtml" />
+    <Content Include="Views\Application\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
