@@ -14,11 +14,9 @@
 </p>
 <table class="table">
     <tr>
-        <th>@Html.DisplayNameFor(model => model.company_nm)</th>
         <th>@Html.BuildSortableLink("Name","Index","company_nm",queryOptions)</th>
-        <th>@Html.DisplayNameFor(model => model.is_client)</th>
-        <th>Actions
-        </th>
+        <th>@Html.BuildSortableLink("Is Client", "Index", "is_client", queryOptions)</th>
+        <th>Actions</th>
     </tr>
     @foreach (var item in Model) {
         <tr>

@@ -3,122 +3,114 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using System.Linq.Dynamic;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using CVB_Web;
 using CVB_Web.Models;
-using System.Web.ModelBinding;
 
-namespace CVB_Web.Controllers {
-
-    public class CompanyController : Controller {   
-
-        // establishes DbContext on each HTML request
+namespace CVB_Web.Controllers
+{
+    public class AppDomainController : Controller
+    {
         private meradia_db db = new meradia_db();
 
-        // GET: Company
-        public ActionResult Index([Form] QueryOptions queryOptions) {
-
-            var m = db.companies.OrderBy(queryOptions.Sort);
-
-            ViewBag.QueryOptions = queryOptions;
-
-            return View(m);
+        // GET: AppDomain
+        public ActionResult Index()
+        {
+            return View(db.app_domain.ToList());
         }
 
-        // GET: Company/Details/5
+        // GET: AppDomain/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            company company = db.companies.Find(id);
-            if (company == null)
+            app_domain app_domain = db.app_domain.Find(id);
+            if (app_domain == null)
             {
                 return HttpNotFound();
             }
-            return View(company);
+            return View(app_domain);
         }
 
-        // GET: Company/Create
+        // GET: AppDomain/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Company/Create
+        // POST: AppDomain/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "company_nm,is_client,company_short_nm,company_location,company_descr")] company company)
+        public ActionResult Create([Bind(Include = "ID,app_domain_nm")] app_domain app_domain)
         {
             if (ModelState.IsValid)
             {
-                db.companies.Add(company);
+                db.app_domain.Add(app_domain);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(company);
+            return View(app_domain);
         }
 
-        // GET: Company/Edit/5
+        // GET: AppDomain/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            company company = db.companies.Find(id);
-            if (company == null)
+            app_domain app_domain = db.app_domain.Find(id);
+            if (app_domain == null)
             {
                 return HttpNotFound();
             }
-            return View(company);
+            return View(app_domain);
         }
 
-        // POST: Company/Edit/5
+        // POST: AppDomain/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,company_nm,is_client,company_short_nm,company_location,company_descr")] company company)
+        public ActionResult Edit([Bind(Include = "ID,app_domain_nm")] app_domain app_domain)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(company).State = EntityState.Modified;
+                db.Entry(app_domain).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(company);
+            return View(app_domain);
         }
 
-        // GET: Company/Delete/5
+        // GET: AppDomain/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            company company = db.companies.Find(id);
-            if (company == null)
+            app_domain app_domain = db.app_domain.Find(id);
+            if (app_domain == null)
             {
                 return HttpNotFound();
             }
-            return View(company);
+            return View(app_domain);
         }
 
-        // POST: Company/Delete/5
+        // POST: AppDomain/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            company company = db.companies.Find(id);
-            db.companies.Remove(company);
+            app_domain app_domain = db.app_domain.Find(id);
+            db.app_domain.Remove(app_domain);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

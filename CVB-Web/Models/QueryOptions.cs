@@ -18,6 +18,12 @@ namespace CVB_Web.Models
             SortField = "ID";
             SortOrder = SortOrder.ASC;
         }
+
+        public string Sort {
+            get {
+                return string.Format("{0} {1}", SortField, SortOrder.ToString());
+            }
+        }
     }
 
 }
