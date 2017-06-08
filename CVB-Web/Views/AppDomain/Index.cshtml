@@ -4,17 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Application Domains</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.app_domain_nm)
-        </th>
-        <th></th>
+        <th>@Html.DisplayNameFor(model => model.app_domain_nm)</th>
+        <th>Actions</th>
     </tr>
 
 @foreach (var item in Model) {

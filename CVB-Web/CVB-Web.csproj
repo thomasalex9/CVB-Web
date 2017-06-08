@@ -236,6 +236,7 @@
     <Compile Include="Models\holiday.cs">
       <DependentUpon>ModelCvb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MeradiaDbConfig.cs" />
     <Compile Include="Models\ModelCvb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -251,6 +252,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelCvb.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelCvbDataAnnotations.cs" />
     <Compile Include="Models\noteworthy_sow.cs">
       <DependentUpon>ModelCvb.tt</DependentUpon>
     </Compile>

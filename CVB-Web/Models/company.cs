@@ -24,15 +24,10 @@ namespace CVB_Web.Models
         }
 
         public int ID { get; set; }
-        [Display(Name = "Name")]
         public string company_nm { get; set; }
-        [Display(Name = "Location")]
         public string company_location { get; set; }
-        [Display(Name = "Is a Client?")]
         public bool is_client { get; set; }
-        [Display(Name = "Description")]
         public string company_descr { get; set; }
-        [Display(Name = "Short Name")]
         public string company_short_nm { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
