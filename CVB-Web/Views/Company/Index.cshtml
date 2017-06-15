@@ -23,9 +23,9 @@
             <td>@Html.DisplayFor(modelItem => item.company_nm)</td>
             <td>@Html.DisplayFor(modelItem => item.is_client)</td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary"} ) 
-                @Html.ActionLink("Details", "Details", new { id=item.ID }, new { @class = "btn btn-info" })
-                @Html.ActionLink("Delete", "Delete", new { id=item.ID }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
             </td>
         </tr>
     }
