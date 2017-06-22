@@ -158,6 +158,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ConsultantController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TitleController.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -389,6 +390,11 @@
     <Content Include="Views\Consultant\Details.cshtml" />
     <Content Include="Views\Consultant\Edit.cshtml" />
     <Content Include="Views\Consultant\Index.cshtml" />
+    <Content Include="Views\Title\Create.cshtml" />
+    <Content Include="Views\Title\Delete.cshtml" />
+    <Content Include="Views\Title\Details.cshtml" />
+    <Content Include="Views\Title\Edit.cshtml" />
+    <Content Include="Views\Title\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

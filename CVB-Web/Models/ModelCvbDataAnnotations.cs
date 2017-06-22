@@ -59,12 +59,12 @@ namespace CVB_Web.Models
 
         [DataType(DataType.Date)]
         [Display(Name = "Start Date")]
-        [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> start_dt;
 
         [DataType(DataType.Date)]
         [Display(Name = "End Date")]
-        [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> end_dt;
 
         [Display(Name = "Is Admin")]
@@ -72,14 +72,16 @@ namespace CVB_Web.Models
 
         [Display(Name = "Is Manager")]
         public bool is_manager;
+
         [Display(Name = "Email")]
         public string email_address;
+
         [Display(Name = "Noteworthy Intro")]
         public string noteworthy_intro;
 
         [DataType(DataType.Date)]
         [Display(Name = "Birthday")]
-        [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> birth_dt;
 
         [Display(Name = "Vacation Days")]

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Dynamic;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CVB_Web.Models;
+using System.Web.ModelBinding;
 
 namespace CVB_Web.Controllers
 {
@@ -15,9 +17,33 @@ namespace CVB_Web.Controllers
         private meradia_db db = new meradia_db();
 
         // GET: Consultant
-        public ActionResult Index()
+        public ActionResult Index([Form] QueryOptions queryOptions, string title, string search)
         {
             var consultants = db.consultants.Include(c => c.title);
+
+            // get a list of distinct titles from the list of consultants
+            var title_list = consultants.OrderBy(c => c.title.title_nm).Select(c => c.title.title_nm).Distinct();
+            ViewBag.Title = new SelectList(title_list);
+
+            // check for any search string.  note that search takes
+            // precedence over filter, and is therefore applied first
+            if (!String.IsNullOrEmpty(search)) {
+                consultants = consultants.Where(
+                    c => c.consultant_nm.Contains(search) ||
+                    c.consultant_initials.Contains(search));
+                ViewBag.Search = search;
+            }
+
+            // check for the "title" filter.  
+            if (!String.IsNullOrEmpty(title)) {
+                consultants = consultants.Where(c => c.title.title_nm == title);
+            }
+
+            // the queryOptions parameter determines which column, if any, is being
+            // sorted, and the direction of the sort (ASC or DESC)
+            consultants = consultants.OrderBy(queryOptions.Sort);
+            ViewBag.QueryOptions = queryOptions;
+
             return View(consultants.ToList());
         }
 

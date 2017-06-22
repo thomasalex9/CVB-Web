@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.title_id, "title_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.title_id, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("title_id", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.title_id, "", new { @class = "text-danger" })
@@ -42,17 +42,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.start_dt, htmlAttributes: new { @class = "datepicker" })
+            @Html.LabelFor(model => model.start_dt, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.start_dt, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.start_dt, new { htmlAttributes = new { @class = "datepicker" } })
                 @Html.ValidationMessageFor(model => model.start_dt, "", new { @class = "text-danger" })
+                @Html.DisplayFor(model=> model.start_dt)
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.end_dt, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.end_dt, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.end_dt, new { htmlAttributes = new { @class = "datepicker" } })
                 @Html.ValidationMessageFor(model => model.end_dt, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -120,7 +121,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.vacation_available, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.vacation_available, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.vacation_available, new { htmlAttributes = new { @class = "form-control"} })
                 @Html.ValidationMessageFor(model => model.vacation_available, "", new { @class = "text-danger" })
             </div>
         </div>
