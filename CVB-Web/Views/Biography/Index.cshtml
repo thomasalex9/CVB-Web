@@ -1,10 +1,6 @@
 ﻿@model IEnumerable<CVB_Web.Models.consultant_biography>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
+<h2>Biographies for @Model.First().consultant.consultant_nm</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,28 +8,19 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.bio_txt)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.show)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.bio_descr)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.show_RIC)
+            @Html.DisplayNameFor(model => model.bio_txt)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.consultant.consultant_nm)
-        </th>
-        <th></th>
+        <th>Actions</th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.bio_txt)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.show)
         </td>
@@ -41,10 +28,7 @@
             @Html.DisplayFor(modelItem => item.bio_descr)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.show_RIC)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.consultant.consultant_nm)
+            @Html.DisplayFor(modelItem => item.bio_txt)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
