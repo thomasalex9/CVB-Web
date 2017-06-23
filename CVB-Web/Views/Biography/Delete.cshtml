@@ -1,0 +1,64 @@
+﻿@model CVB_Web.Models.consultant_biography
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>consultant_biography</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bio_txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bio_txt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.show)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.show)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bio_descr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bio_descr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.show_RIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.show_RIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consultant.consultant_nm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consultant.consultant_nm)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

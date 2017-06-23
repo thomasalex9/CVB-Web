@@ -1,0 +1,58 @@
+﻿@model CVB_Web.Models.consultant_biography
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>consultant_biography</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bio_txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bio_txt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.show)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.show)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bio_descr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bio_descr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.show_RIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.show_RIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consultant.consultant_nm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consultant.consultant_nm)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

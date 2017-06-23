@@ -1,13 +1,16 @@
 ﻿@model CVB_Web.Models.consultant
 
 @{
-    string imgUrl = Model.image_url.Split('#')[1];
+    // image_url's migrated from the original Access database were prefixed
+    // with a string like "TEA Photo#".  
+
+    string imgUrl = Model.image_url;
+    if (imgUrl.IndexOf("#") > -1) { imgUrl = imgUrl.Split('#')[1]; }
 }
 
 <h2>View Consultant</h2>
 
 <div>
-    @*<h4>Consultant</h4>*@
     <dl class="dl-horizontal">
         <dt>@Html.DisplayNameFor(model => model.consultant_nm)</dt>
         <dd>@Html.DisplayFor(model => model.consultant_nm)</dd>
@@ -40,7 +43,8 @@
         <dd>@Html.DisplayFor(model => model.noteworthy_intro)</dd>
 
         <dt>@Html.DisplayNameFor(model => model.birth_dt)</dt>
-        <dd>@Html.DisplayFor(model => model.birth_dt)</dd>
+        @*<dd>@Html.DisplayFor(model => model.birth_dt)</dd>*@
+        <dd>@string.Format("{0:MMMM d}", Model.birth_dt)</dd>
 
         @*
         <dt>@Html.DisplayNameFor(model => model.headshot)</dt>
@@ -53,5 +57,6 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index") |
+    @Html.ActionLink("Biography","Index","Biography", new { consultant_id = Model.ID }, null)
 </p>

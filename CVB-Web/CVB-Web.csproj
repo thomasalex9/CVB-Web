@@ -152,6 +152,7 @@
     <Compile Include="Controllers\AppDomainController.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\AppVendorController.cs" />
+    <Compile Include="Controllers\BiographyController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -395,6 +396,11 @@
     <Content Include="Views\Title\Details.cshtml" />
     <Content Include="Views\Title\Edit.cshtml" />
     <Content Include="Views\Title\Index.cshtml" />
+    <Content Include="Views\Biography\Create.cshtml" />
+    <Content Include="Views\Biography\Delete.cshtml" />
+    <Content Include="Views\Biography\Details.cshtml" />
+    <Content Include="Views\Biography\Edit.cshtml" />
+    <Content Include="Views\Biography\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

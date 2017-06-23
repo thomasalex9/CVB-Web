@@ -57,7 +57,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.image_url, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.image_url, "", new { @class = "text-danger" })
-                <img src="@Model.image_url.Split('#')[1]" height="112" width="122">
+                @{
+                    // image_url's migrated from the original Access database were prefixed
+                    // with a string like "TEA Photo#".
+
+                    string imgUrl = Model.image_url;
+                    if (imgUrl.IndexOf("#") > -1) { imgUrl = imgUrl.Split('#')[1]; }
+                }
+                <img src="@imgUrl" height="112" width="122">
             </div>
         </div>
 
