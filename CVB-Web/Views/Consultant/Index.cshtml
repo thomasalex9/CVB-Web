@@ -4,18 +4,27 @@
 
 @{
     var queryOptions = (QueryOptions)ViewBag.QueryOptions;
+    // var filter_list = (IEnumerable<SelectListItem>)ViewBag.FilterList;
 }
 
 <h2>Consultants</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
-    @using (Html.BeginForm("Index", "Consultant", FormMethod.Get))
-    {
-        <label>Filter by Title:</label>
-        @Html.DropDownList("Title", "All")
-        <input type="submit" value="Filter" />
-        <input type="hidden" name="Search" id="Search" value="@ViewBag.Search" />
+    @using (Html.BeginForm("Index", "Consultant", FormMethod.Get, new { @class = "navbar-form" })) {
+        @*<label>Filter by @queryOptions.FilterField:</label>*@
+        <div class="form-group">
+            @Html.DropDownList("FilterValue", queryOptions.FilterList, "All", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search..." name="Search" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default" type="submit">Go</button>
+        </div>
+        <input type="hidden" name="SortField" id="SortField" value="@queryOptions.SortField" />
+        <input type="hidden" name="SortOrder" id="SortOrder" value="@queryOptions.SortOrder" />
+        <input type="hidden" name="FilterField" id="FilterField" value="@queryOptions.FilterField" />
     }
 </p>
 
@@ -24,6 +33,9 @@
         <th>@Html.BuildSortableLink("Name","Index","consultant_nm",queryOptions)</th>
         <th>@Html.BuildSortableLink("Initials","Index", "consultant_initials",queryOptions)</th>
         <th>@Html.BuildSortableLink("Title", "Index", "title.title_nm", queryOptions)</th>
+        @*<th>@Html.DisplayNameFor(m => m.consultant_nm)</th>
+        <th>@Html.DisplayNameFor(m => m.consultant_initials)</th>
+        <th>@Html.DisplayNameFor(m => m.title.title_nm)</th>*@
         <th>Actions</th>
     </tr>
 

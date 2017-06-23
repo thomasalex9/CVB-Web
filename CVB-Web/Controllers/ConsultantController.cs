@@ -17,33 +17,38 @@ namespace CVB_Web.Controllers
         private meradia_db db = new meradia_db();
 
         // GET: Consultant
-        public ActionResult Index([Form] QueryOptions queryOptions, string title, string search)
-        {
+        public ActionResult Index([Form] QueryOptions p_QueryOptions, string title )  {
+
+            // we support filtering on Title
+            if (String.IsNullOrEmpty(p_QueryOptions.FilterField)) {
+                p_QueryOptions.FilterField = "Title";
+            }
+
             var consultants = db.consultants.Include(c => c.title);
 
             // get a list of distinct titles from the list of consultants
             var title_list = consultants.OrderBy(c => c.title.title_nm).Select(c => c.title.title_nm).Distinct();
-            ViewBag.Title = new SelectList(title_list);
+            p_QueryOptions.FilterList = new SelectList(title_list);
 
             // check for any search string.  note that search takes
             // precedence over filter, and is therefore applied first
-            if (!String.IsNullOrEmpty(search)) {
+            if (!String.IsNullOrEmpty(p_QueryOptions.Search)) {
                 consultants = consultants.Where(
-                    c => c.consultant_nm.Contains(search) ||
-                    c.consultant_initials.Contains(search));
-                ViewBag.Search = search;
+                    c => c.consultant_nm.Contains(p_QueryOptions.Search) ||
+                    c.consultant_initials.Contains(p_QueryOptions.Search));
             }
 
             // check for the "title" filter.  
-            if (!String.IsNullOrEmpty(title)) {
-                consultants = consultants.Where(c => c.title.title_nm == title);
+            if (!String.IsNullOrEmpty(p_QueryOptions.FilterValue)) {
+                consultants = consultants.Where(c => c.title.title_nm == p_QueryOptions.FilterValue);
             }
 
             // the queryOptions parameter determines which column, if any, is being
             // sorted, and the direction of the sort (ASC or DESC)
-            consultants = consultants.OrderBy(queryOptions.Sort);
-            ViewBag.QueryOptions = queryOptions;
+            consultants = consultants.OrderBy(p_QueryOptions.Sort);
 
+            ViewBag.QueryOptions = p_QueryOptions;
+        
             return View(consultants.ToList());
         }
 

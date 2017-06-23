@@ -59,13 +59,16 @@ namespace CVB_Web.Models
 
         [DataType(DataType.Date)]
         [Display(Name = "Start Date")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true,NullDisplayText = "n/a")]
         public Nullable<System.DateTime> start_dt;
 
         [DataType(DataType.Date)]
         [Display(Name = "End Date")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true, NullDisplayText = "n/a" )]
         public Nullable<System.DateTime> end_dt;
+
+        [Display(Name = "Image")]
+        public string image_url;
 
         [Display(Name = "Is Admin")]
         public bool is_admin;
@@ -77,17 +80,16 @@ namespace CVB_Web.Models
         public string email_address;
 
         [Display(Name = "Noteworthy Intro")]
+        [MaxLength(215, ErrorMessage = "Max length is 215 characters")]
         public string noteworthy_intro;
 
         [DataType(DataType.Date)]
         [Display(Name = "Birthday")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true, NullDisplayText = "n/a")]
         public Nullable<System.DateTime> birth_dt;
 
         [Display(Name = "Vacation Days")]
         public Nullable<decimal> vacation_available;
     }
     [MetadataType(typeof(consultant_MetaData))] public partial class consultant { }
-
-
 }

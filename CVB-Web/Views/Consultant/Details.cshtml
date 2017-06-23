@@ -1,17 +1,13 @@
 ﻿@model CVB_Web.Models.consultant
 
 @{
-    ViewBag.Title = "Details";
-
-    string imgUrl;
-    imgUrl = Model.image_url.Split('#')[1];
+    string imgUrl = Model.image_url.Split('#')[1];
 }
 
-<h2>Details</h2>
+<h2>View Consultant</h2>
 
 <div>
-    <h4>Consultant</h4>
-    <hr />
+    @*<h4>Consultant</h4>*@
     <dl class="dl-horizontal">
         <dt>@Html.DisplayNameFor(model => model.consultant_nm)</dt>
         <dd>@Html.DisplayFor(model => model.consultant_nm)</dd>
@@ -26,12 +22,10 @@
         <dd>@Html.DisplayFor(model => model.start_dt)</dd>
 
         <dt>@Html.DisplayNameFor(model => model.end_dt)</dt>
-
         <dd>@Html.DisplayFor(model => model.end_dt)</dd>
         
         <dt>@Html.DisplayNameFor(model => model.image_url)</dt>
-        <dd>@Html.DisplayFor(model => model.image_url)</dd>
-        <dd><img src="@imgUrl" height="112" width="122"></img>
+        <dd><img src="@imgUrl" height="112" width="122">
         
         <dt>@Html.DisplayNameFor(model => model.is_admin)</dt>
         <dd>@Html.DisplayFor(model => model.is_admin)</dd>

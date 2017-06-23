@@ -10,9 +10,10 @@ namespace CVB_Web.Extensions
 {
     public static class HtmlHelperExtensions
     {
+        // this method uses the QueryOptions class to build links
         public static MvcHtmlString BuildSortableLink(this HtmlHelper htmlHelper, 
-            string fieldName, string  actionName, string sortField, QueryOptions queryOptions)
-        {
+            string fieldName, string  actionName, string sortField, QueryOptions queryOptions) {
+
             var urlHelper = new UrlHelper(htmlHelper.ViewContext.RequestContext);
             var isCurrentSortField = (queryOptions.SortField == sortField);
 
@@ -21,7 +22,10 @@ namespace CVB_Web.Extensions
                     urlHelper.Action(actionName, 
                         new { SortField = sortField,
                               SortOrder = (isCurrentSortField && queryOptions.SortOrder == SortOrder.ASC ?
-                                              SortOrder.DESC : SortOrder.ASC) } ),
+                                              SortOrder.DESC : SortOrder.ASC),
+                              Search = queryOptions.Search,
+                              FilterField = queryOptions.FilterField,
+                              FilterValue = queryOptions.FilterValue } ),
                     fieldName,
                     BuildSortIcon(isCurrentSortField,queryOptions)));
 
