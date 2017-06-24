@@ -92,4 +92,16 @@ namespace CVB_Web.Models
         public Nullable<decimal> vacation_available;
     }
     [MetadataType(typeof(consultant_MetaData))] public partial class consultant { }
+
+    // --------------- consultant_biography ---------------------------------
+    public class consultant_biography_MetaData {
+        [Display(Name = "Biography")]
+        public string bio_txt;
+        [Display(Name = "Show")]
+        public bool show;
+        [Display(Name = "Description")]
+        public string bio_descr;
+    }
+    [MetadataType(typeof(consultant_biography_MetaData))] public partial class consultant_biography { }
+
 }
