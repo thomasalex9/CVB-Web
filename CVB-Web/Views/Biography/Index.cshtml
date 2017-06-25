@@ -3,7 +3,7 @@
 <h2>Biographies for @Model.First().consultant.consultant_nm</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new { consultant_id = Model.First().consultant_id } )
 </p>
 <table class="table">
     <tr>

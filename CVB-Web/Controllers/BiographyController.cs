@@ -24,8 +24,7 @@ namespace CVB_Web.Controllers
         // GET: Biography/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
-            {
+            if (id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             consultant_biography consultant_biography = db.consultant_biography.Find(id);
@@ -37,9 +36,9 @@ namespace CVB_Web.Controllers
         }
 
         // GET: Biography/Create
-        public ActionResult Create()
+        public ActionResult Create(int consultant_id)
         {
-            ViewBag.consultant_id = new SelectList(db.consultants, "ID", "consultant_nm");
+            ViewBag.consultant_id = consultant_id;
             return View();
         }
 
@@ -52,9 +51,10 @@ namespace CVB_Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                consultant_biography.show_RIC = (consultant_biography.show ? "Yes" : "No");
                 db.consultant_biography.Add(consultant_biography);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { consultant_id = consultant_biography.consultant_id });
             }
 
             ViewBag.consultant_id = new SelectList(db.consultants, "ID", "consultant_nm", consultant_biography.consultant_id);
@@ -85,6 +85,7 @@ namespace CVB_Web.Controllers
         public ActionResult Edit([Bind(Include = "ID,consultant_id,bio_txt,show,bio_descr,show_RIC")] consultant_biography consultant_biography)
         {
             if (ModelState.IsValid) {
+                // consultant_biography.show_RIC = (consultant_biography.show ? "Yes" : "No");
                 db.Entry(consultant_biography).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index",new { consultant_id = consultant_biography.consultant_id });
