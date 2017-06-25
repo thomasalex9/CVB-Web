@@ -73,7 +73,7 @@ namespace CVB_Web.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.consultant_id = new SelectList(db.consultants, "ID", "consultant_nm", consultant_biography.consultant_id);
+            //ViewBag.consultant_id = new SelectList(db.consultants, "ID", "consultant_nm", consultant_biography.consultant_id);
             return View(consultant_biography);
         }
 
@@ -84,13 +84,12 @@ namespace CVB_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,consultant_id,bio_txt,show,bio_descr,show_RIC")] consultant_biography consultant_biography)
         {
-            if (ModelState.IsValid)
-            {
+            if (ModelState.IsValid) {
                 db.Entry(consultant_biography).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index",new { consultant_id = consultant_biography.consultant_id });
             }
-            ViewBag.consultant_id = new SelectList(db.consultants, "ID", "consultant_nm", consultant_biography.consultant_id);
+            //ViewBag.consultant_id = new SelectList(db.consultants, "ID", "consultant_nm", consultant_biography.consultant_id);
             return View(consultant_biography);
         }
 

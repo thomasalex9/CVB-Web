@@ -55,13 +55,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.image_url, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.image_url, new { htmlAttributes = new { @class = "form-control" } })
+                <input name="image_url" id="image_url" class="form-control" type="text" value="@Model.image_url" style="max-width:3000px" />
                 @Html.ValidationMessageFor(model => model.image_url, "", new { @class = "text-danger" })
-                @{
-                    // image_url's migrated from the original Access database were prefixed
-                    // with a string like "TEA Photo#".
-
-                    string imgUrl = Model.image_url;
+                @{  string imgUrl = Model.image_url;
+                    // image_url's migrated from the original Access database had prefixes like "TEA Photo#".  
+                    // if we find a '#' character, ignore it and everything to the left.
                     if (imgUrl.IndexOf("#") > -1) { imgUrl = imgUrl.Split('#')[1]; }
                 }
                 <img src="@imgUrl" height="112" width="122">
@@ -99,7 +97,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.noteworthy_intro, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <textarea class="form-control" rows="3" name="noteworthy_intro">@Model.noteworthy_intro</textarea>
+                <textarea class="form-control" rows="3" name="noteworthy_intro" id="noteworthy_intro" style="max-width:3000px">@Model.noteworthy_intro</textarea>
                 @Html.ValidationMessageFor(model => model.noteworthy_intro, "", new { @class = "text-danger" })
             </div>
         </div>

@@ -11,6 +11,8 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.consultant_id)
+        @Html.HiddenFor(model => model.show_RIC)
 
         <div class="form-group">
             @Html.LabelFor(model => model.bio_descr, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -33,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.bio_txt, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <textarea class="form-control" rows="3" name="bio_txt">@Model.bio_txt</textarea>
+                <textarea class="form-control" rows="10" name="bio_txt" style="max-width:3000px">@Model.bio_txt</textarea>
                 @Html.ValidationMessageFor(model => model.bio_txt, "", new { @class = "text-danger" })
             </div>
         </div>
