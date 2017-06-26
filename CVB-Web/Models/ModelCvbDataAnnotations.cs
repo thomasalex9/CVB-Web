@@ -103,5 +103,4 @@ namespace CVB_Web.Models
         public string bio_descr;
     }
     [MetadataType(typeof(consultant_biography_MetaData))] public partial class consultant_biography { }
-
 }

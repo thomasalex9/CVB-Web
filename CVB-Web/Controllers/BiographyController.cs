@@ -47,11 +47,14 @@ namespace CVB_Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,consultant_id,bio_txt,show,bio_descr,show_RIC")] consultant_biography consultant_biography)
+        public ActionResult Create([Bind(Include = "ID,consultant_id,bio_txt,show,bio_descr")] consultant_biography consultant_biography)
         {
             if (ModelState.IsValid)
             {
+                // column "show_RIC" is non-nullable legacy baggage and is not used.
+                // still, we need to give it a value or the Save will fail
                 consultant_biography.show_RIC = (consultant_biography.show ? "Yes" : "No");
+
                 db.consultant_biography.Add(consultant_biography);
                 db.SaveChanges();
                 return RedirectToAction("Index", new { consultant_id = consultant_biography.consultant_id });
@@ -82,10 +85,10 @@ namespace CVB_Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,consultant_id,bio_txt,show,bio_descr,show_RIC")] consultant_biography consultant_biography)
+        public ActionResult Edit([Bind(Include = "ID,consultant_id,bio_txt,show,bio_descr")] consultant_biography consultant_biography)
         {
-            if (ModelState.IsValid) {
-                // consultant_biography.show_RIC = (consultant_biography.show ? "Yes" : "No");
+             if (ModelState.IsValid) {
+                consultant_biography.show_RIC = "No";
                 db.Entry(consultant_biography).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index",new { consultant_id = consultant_biography.consultant_id });
