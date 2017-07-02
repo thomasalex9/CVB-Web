@@ -1,14 +1,22 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+<p></p>
+<p></p>
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <div class="row">
+        <div class="col-md-2">
+            <img src="~/Content/meradia-globe.png" />
+        </div>
+        <div class="col-md-10">
+            <h1>Meradia Consultant Center</h1>
+        </div>
+    </div>
+    <p class="lead">
+        Hello, -consultant_name- This is where you enter your TimeSlips, and maintain your CV Profil.
+    </p>
 </div>
 
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
         <p>
@@ -27,5 +35,38 @@
         <h2>Web Hosting</h2>
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                 <h3 class="panel-title">My Timeslips</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Hours This Week</dt>
+                    <dd>80 hours</dd>
+                    <dt>Vacation Days Available</dt>
+                    <dd>5</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">My Profile</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Date of Last Edit</dt>
+                    <dd>Like, ages ago!</dd>
+                    <dt>Application Count</dt>
+                    <dd>16</dd>
+                </dl>
+            </div>
+        </div>
     </div>
 </div>
