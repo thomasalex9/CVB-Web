@@ -164,6 +164,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Models\application.cs">
       <DependentUpon>ModelCvb.tt</DependentUpon>
     </Compile>
@@ -309,6 +310,8 @@
       <DependentUpon>ModelCvb.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ConsultantDashboard.cs" />
+    <Compile Include="ViewModels\TimeSlipDates.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -340,6 +343,7 @@
     <Content Include="Models\ModelCvb.edmx.diagram">
       <DependentUpon>ModelCvb.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\CVB-Web - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\CVB-Web20170528095449 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -352,7 +356,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
