@@ -7,7 +7,6 @@ using System.Web.Mvc;
 namespace CVB_Web.ViewModels {
     public class ConsultantDashboard {
 
-
         // "My Timeslips"
         public decimal vacation_days_available { get; }
         public decimal vacation_days_remaining { get; }
