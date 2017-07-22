@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVB-Web", "CVB-Web\CVB-Web.csproj", "{10903CE8-04D5-4F4E-888B-01D900C21A6F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyCVB", "..\CopyCVB\CopyCVB\CopyCVB.csproj", "{86F18BF8-45F5-4666-BB93-F3354CAFDD62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{10903CE8-04D5-4F4E-888B-01D900C21A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10903CE8-04D5-4F4E-888B-01D900C21A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10903CE8-04D5-4F4E-888B-01D900C21A6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86F18BF8-45F5-4666-BB93-F3354CAFDD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86F18BF8-45F5-4666-BB93-F3354CAFDD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86F18BF8-45F5-4666-BB93-F3354CAFDD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86F18BF8-45F5-4666-BB93-F3354CAFDD62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

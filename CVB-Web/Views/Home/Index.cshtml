@@ -3,17 +3,19 @@
 <p></p>
 <p></p>
 
-<div class="jumbotron">
+<div class="well well-lg">
     <div class="row">
         <div class="col-md-2">
             <img src="~/Content/meradia-globe.png" />
         </div>
         <div class="col-md-10">
-            <h1>Meradia Consultant Center</h1>
+            <h2>Meradia Consultant Center</h2>
         </div>
     </div>
     <p class="lead">
-        Hello, Thomas E. Alex. This is where you enter your TimeSlips, and maintain your CV Profile.
+        <h4 >
+            Hello, Thomas E. Alex. This is where you enter your TimeSlips, and maintain your CV Profile.
+        </h4> 
     </p>
 </div>
 
@@ -24,33 +26,49 @@
                 <h3 class="panel-title">My Timeslips</h3>
             </div>
             <div class="panel-body">
-                <dl class="dl-horizontal">
-                    <dt>Vacation Days Remaining</dt>
-                        <dd>@String.Format("{0:n0}", Model.vacation_days_remaining)</dd>
-                    <dt>Hours This Week</dt>
-                        <dd>@Model.hours_this_week </dd>
-                    <dt>Hours Last Week</dt>
-                        <dd>@Model.hours_last_week </dd>
-                    <dt>Hours Month to Date</dt>
-                        <dd>@Model.hours_mtd </dd>
-                    <dt>Hours Last Month</dt>
-                        <dd>@Model.hours_last_month </dd>
-                </dl>
+                <table width="100%" class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <td align="left"><label>Vacation Days Remaining</label></td>
+                            <td align="right">@String.Format("{0:n0}", Model.vacation_days_remaining)</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><label>Hours This Week</label></td>
+                            <td align="right">@Model.hours_this_week</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><label>Hours Last Week</label></td>
+                            <td align="right">@Model.hours_last_week</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><label>Hours Month to Date</label></td>
+                            <td align="right">@Model.hours_mtd</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><label>Hours Last Month</label></td>
+                            <td align="right">@Model.hours_last_month</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
     <div class="col-sm-6">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">My CV Profile and Experience</h3>
+                <h3 class="panel-title">My Profile</h3>
             </div>
             <div class="panel-body">
-                <dl class="dl-horizontal">
-                    <dt>Date of Last Edit</dt>
-                    <dd>Like, ages ago!</dd>
-                    <dt>Application Count</dt>
-                    <dd>16</dd>
-                </dl>
+                <table width="100%" class="table-responsive">
+                    <tr>
+                        <td align="left"><label>Date of Last Edit</label></td>
+                        <td align="right">3/23/2017</td>
+                    </tr>
+                    <tr>
+                        <td align="left"><label>Application Count</label></td>
+                        <td align="right">17</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

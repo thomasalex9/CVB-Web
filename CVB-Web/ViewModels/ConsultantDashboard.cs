@@ -23,9 +23,8 @@ namespace CVB_Web.ViewModels {
         public int application_count { get; }
         public int experience_details { get; }
 
-        // Constructor
+        // Constructors
         public ConsultantDashboard(int consultant_id) {
-
             meradia_db db = new meradia_db();
             this.dates = new TimeSlipDates(System.DateTime.Parse("5/14/2017"));
             this.vacation_days_available = (db.consultants.Find(7).vacation_available) ?? 0;
@@ -36,6 +35,16 @@ namespace CVB_Web.ViewModels {
             this.hours_last_month = SumHours(db, consultant_id, dates.last_month_start_dt, dates.last_month_end_dt);
         }
 
+        public ConsultantDashboard()
+        {
+            this.dates = new TimeSlipDates(System.DateTime.Parse("5/14/2017"));
+            this.vacation_days_available = 15;
+            this.vacation_days_remaining = 13;
+            this.hours_this_week = 38;
+            this.hours_last_week = 41;
+            this.hours_mtd = 63;
+            this.hours_last_month = 161;
+        }
         private decimal CalcVacationDaysRemaining(int consultant_id, meradia_db db) {
 
             // timeslips for vacation days are entered under a generic 

@@ -23,8 +23,9 @@ namespace CVB_Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-             bundles.Add(new StyleBundle("~/Content/css").Include(
-                     "~/Content/bootstrap.css",
+            // original bootstrap 3.3.7 is simply named "bootstratp.css"
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                     "~/Content/bootstrap-cerulean.min.css",
                      "~/Content/site.css"));
         }
     }
