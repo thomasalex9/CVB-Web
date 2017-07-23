@@ -11,8 +11,7 @@ namespace CVB_Web.Controllers
     {
         public ActionResult Index()
         {
-            //ConsultantDashboard cdb = new ConsultantDashboard(7);
-            ConsultantDashboard cdb = new ConsultantDashboard();
+            ConsultantDashboard cdb = new ConsultantDashboard(7);
             return View(cdb);
         }
 

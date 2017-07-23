@@ -25,6 +25,7 @@ namespace CVB_Web.ViewModels {
 
         // Constructors
         public ConsultantDashboard(int consultant_id) {
+            // query the db for the specified consultant
             meradia_db db = new meradia_db();
             this.dates = new TimeSlipDates(System.DateTime.Parse("5/14/2017"));
             this.vacation_days_available = (db.consultants.Find(7).vacation_available) ?? 0;
@@ -37,6 +38,7 @@ namespace CVB_Web.ViewModels {
 
         public ConsultantDashboard()
         {
+            // populate some dummy data
             this.dates = new TimeSlipDates(System.DateTime.Parse("5/14/2017"));
             this.vacation_days_available = 15;
             this.vacation_days_remaining = 13;
