@@ -12,7 +12,6 @@ namespace CVB_Web.Controllers
         public ActionResult Index()
         {
             ConsultantDashboard cdb = new ConsultantDashboard(7);
-            test
             return View(cdb);
         }
 
