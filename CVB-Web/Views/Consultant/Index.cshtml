@@ -9,57 +9,61 @@
 
 <h2>Consultants</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-    @using (Html.BeginForm("Index", "Consultant", FormMethod.Get, new { @class = "navbar-form" })) {
-        @*<label>Filter by @queryOptions.FilterField:</label>*@
-        <div class="form-group">
+<div class="row">
+    <div class="col-sm-8 pull-left">
+        @using (Html.BeginForm("Index", "Consultant", FormMethod.Get, new { @class = "form-inline" }))
+        {
             @Html.DropDownList("FilterValue", queryOptions.FilterList, "All", new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search..." name="Search" />
-        </div>
-        <div class="form-group">
-            <button class="btn btn-default" type="submit">Go</button>
-        </div>
-        <input type="hidden" name="SortField" id="SortField" value="@queryOptions.SortField" />
-        <input type="hidden" name="SortOrder" id="SortOrder" value="@queryOptions.SortOrder" />
-        <input type="hidden" name="FilterField" id="FilterField" value="@queryOptions.FilterField" />
-    }
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search..." name="Search" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Go</button>
+            </div>
+            <input type="hidden" name="SortField" id="SortField" value="@queryOptions.SortField" />
+            <input type="hidden" name="SortOrder" id="SortOrder" value="@queryOptions.SortOrder" />
+            <input type="hidden" name="FilterField" id="FilterField" value="@queryOptions.FilterField" />
+        }
+    </div>
+    <div class="col-sm-4">
+        <span class="pull-right">
+            <a class="btn btn-default" href="@Url.Action("Create", "Consultant")"
+               data-toggle="tooltip" title="New Consultant">
+                <span class="glyphicon glyphicon-plus" style="vertical-align: top"></span>
+                Create
+            </a>
+        </span>
+    </div>
+</div>
+
+<p>
 </p>
 
-<table class="table table-condensed table-responsive">
+<table class="table table-condensed table-striped table-responsive">
     <tr>
         <th>@Html.BuildSortableLink("Name","Index","consultant_nm",queryOptions)</th>
         <th>@Html.BuildSortableLink("Initials","Index", "consultant_initials",queryOptions)</th>
         <th>@Html.BuildSortableLink("Title", "Index", "title.title_nm", queryOptions)</th>
-        @*<th>@Html.DisplayNameFor(m => m.consultant_nm)</th>
-        <th>@Html.DisplayNameFor(m => m.consultant_initials)</th>
-        <th>@Html.DisplayNameFor(m => m.title.title_nm)</th>*@
-        <th>Actions</th>
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        @*<td> @Html.DisplayFor(modelItem => item.ID) </td>*@
         <td> @Html.DisplayFor(modelItem => item.consultant_nm) </td>
         <td> @Html.DisplayFor(modelItem => item.consultant_initials) </td>
         <td> @Html.DisplayFor(modelItem => item.title.title_nm) </td>
-        <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.ID })*@ 
-            <a href="@Url.Action("Edit", "Consultant")">
-                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                Edit
-            </a>
-            @*@Html.ActionLink("Details", "Details", new { id=item.ID }) |*@
-            <a href="@Url.Action("Details", "Consultant")">
+        <td align="right">
+            <a href="@Url.Action("Details", "Consultant", new { id=item.ID })"
+               data-toggle="tooltip" title="View Details">
                 <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                View
-            </a>
-            @*@Html.ActionLink("Delete", "Delete", new { id = item.ID }) |*@
-            <a href="@Url.Action("Delete", "Consultant")">
+            </a>&nbsp;&nbsp;
+            <a href="@Url.Action("Edit", "Consultant", new { id=item.ID })" 
+               data-toggle="tooltip" title="Edit Details">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            </a>&nbsp;&nbsp;
+            <a href="@Url.Action("Delete", "Consultant", new { id=item.ID })"
+               data-toggle="tooltip" title="Delete Consultant">
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                Delete
             </a>
         </td>
     </tr>

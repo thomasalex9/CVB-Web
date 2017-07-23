@@ -372,6 +372,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Views\Consultant\Edit.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -412,7 +413,6 @@
     <Content Include="Views\Consultant\Create.cshtml" />
     <Content Include="Views\Consultant\Delete.cshtml" />
     <Content Include="Views\Consultant\Details.cshtml" />
-    <Content Include="Views\Consultant\Edit.cshtml" />
     <Content Include="Views\Consultant\Index.cshtml" />
     <Content Include="Views\Title\Create.cshtml" />
     <Content Include="Views\Title\Delete.cshtml" />
@@ -424,6 +424,7 @@
     <Content Include="Views\Biography\Details.cshtml" />
     <Content Include="Views\Biography\Edit.cshtml" />
     <Content Include="Views\Biography\Index.cshtml" />
+    <Content Include="Views\Consultant\Edit-v1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
