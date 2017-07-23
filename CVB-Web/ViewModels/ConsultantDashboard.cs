@@ -38,7 +38,7 @@ namespace CVB_Web.ViewModels {
 
         public ConsultantDashboard()
         {
-            // populate some dummy data
+            // populate some dummy data test
             this.dates = new TimeSlipDates(System.DateTime.Parse("5/14/2017"));
             this.vacation_days_available = 15;
             this.vacation_days_remaining = 13;
