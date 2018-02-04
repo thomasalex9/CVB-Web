@@ -4,22 +4,22 @@ namespace CVB_Web.ViewModels {
     public struct TimeSlipDates {
 
         // "My Timeslips"
-        public System.DateTime last_week_start_dt { get; }
-        public System.DateTime last_week_end_dt { get; }
+        public DateTime last_week_start_dt { get; }
+        public DateTime last_week_end_dt { get; }
 
-        public System.DateTime this_week_start_dt { get; }
-        public System.DateTime this_week_end_dt { get; }
+        public DateTime this_week_start_dt { get; }
+        public DateTime this_week_end_dt { get; }
 
-        public System.DateTime mtd_start_dt { get; }
-        public System.DateTime mtd_end_dt { get; }
+        public DateTime mtd_start_dt { get; }
+        public DateTime mtd_end_dt { get; }
 
-        public System.DateTime ytd_start_dt { get; }
-        public System.DateTime ytd_end_dt { get; }
+        public DateTime ytd_start_dt { get; }
+        public DateTime ytd_end_dt { get; }
 
-        public System.DateTime last_month_start_dt { get; }
-        public System.DateTime last_month_end_dt { get; }
+        public DateTime last_month_start_dt { get; }
+        public DateTime last_month_end_dt { get; }
 
-        public TimeSlipDates(System.DateTime today) {
+        public TimeSlipDates(DateTime today) {
 
             // this week
             int weekday = (int) today.DayOfWeek; //0=Sun 1=Mon 5=Fri 6=Sat

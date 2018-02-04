@@ -25,10 +25,16 @@ namespace CVB_Web.ViewModels {
 
         // Constructors
         public ConsultantDashboard(int consultant_id) {
-            // query the db for the specified consultant
+
+            this.dates = new TimeSlipDates(System.DateTime.Now);
+
             meradia_db db = new meradia_db();
-            this.dates = new TimeSlipDates(System.DateTime.Parse("5/14/2017"));
-            this.vacation_days_available = (db.consultants.Find(7).vacation_available) ?? 0;
+
+            // get vacation days available for the current year
+            this.vacation_days_available = (
+                db.consultants.Where(c => c.ID == consultant_id).
+                    Select(c => c.vacation_available).First() ) ?? 0M;
+
             this.vacation_days_remaining = CalcVacationDaysRemaining(consultant_id, db);
             this.hours_this_week = SumHours(db, consultant_id, dates.this_week_start_dt, dates.this_week_end_dt);
             this.hours_last_week = SumHours(db, consultant_id, dates.last_week_start_dt, dates.last_week_end_dt);
@@ -73,8 +79,8 @@ namespace CVB_Web.ViewModels {
                 Where(t => t.consultant_id == consultant_id &&
                            t.sow_id == meradia_sow &&
                            t.slip_phase_nm == vacation_phase && 
-                           t.slip_start_dt >= dates.ytd_start_dt &&
-                           t.slip_end_dt <= dates.ytd_end_dt).
+                           t.slip_start_dt >= this.dates.ytd_start_dt &&
+                           t.slip_end_dt <= this.dates.ytd_end_dt).
                 Sum(t => t.slip_time);
 
             // subtract vacation hours from vacation days available. then convert 

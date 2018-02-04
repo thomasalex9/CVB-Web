@@ -48,6 +48,9 @@ namespace CVB_Web.Models
     // --------------- consultant -------------------------------------------
     public class consultant_MetaData
     {
+        [Key]
+        public int ID;
+
         [Display(Name = "Name")]
         public string consultant_nm;
 
